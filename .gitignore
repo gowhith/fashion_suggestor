@@ -13,3 +13,5 @@ __pycache__/
 # Optional: Ignore logs and temp files
 *.log
 *.tmp
+.env
+.env
