@@ -1,0 +1,34 @@
+import os
+import json
+import faiss
+import numpy as np
+from sentence_transformers import SentenceTransformer
+from dotenv import load_dotenv
+
+# Load HF token
+load_dotenv()
+hf_token = os.getenv("HUGGINGFACE_TOKEN")
+
+# File paths
+DATA_FILE = "data/fashion_items.json"
+INDEX_FILE = "vector_store/faiss_index.faiss"
+
+# Load model from HF using token
+model = SentenceTransformer("sentence-transformers/all-MiniLM-L6-v2", use_auth_token=hf_token)
+
+# Load item descriptions
+with open(DATA_FILE, "r") as f:
+    items = json.load(f)
+
+descriptions = [item["description"] for item in items]
+vectors = model.encode(descriptions, convert_to_numpy=True).astype("float32")
+
+# Build FAISS index
+dim = vectors.shape[1]
+index = faiss.IndexFlatL2(dim)
+index.add(vectors)
+
+# Save index
+os.makedirs("vector_store", exist_ok=True)
+faiss.write_index(index, INDEX_FILE)
+print(f"✅ Indexed {len(vectors)} fashion items.")

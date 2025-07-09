@@ -1,0 +1,28 @@
+[
+  {
+    "name": "Classic Blue Denim Jacket",
+    "description": "Timeless blue denim jacket, great for casual wear.",
+    "image_path": "data/images/denim_jacket.png"
+  },
+  {
+    "name": "Oversized Streetwear Hoodie",
+    "description": "Trendy oversized hoodie, popular in street fashion.",
+    "image_path": "data/images/hoodie.png"
+  },
+  {
+    "name": "Elegant Black Evening Dress",
+    "description": "Sophisticated black dress for formal occasions.",
+    "image_path": "data/images/black_dress.png"
+  },
+  {
+    "name": "Summer Floral Skirt",
+    "description": "Lightweight floral skirt ideal for summer outings.",
+    "image_path": "data/images/floral_skirt.png"
+  },
+  {
+    "name": "Comfortable White Sneakers",
+    "description": "Classic white sneakers suitable for daily wear.",
+    "image_path": "data/images/sneakers.png"
+  }
+
+]
