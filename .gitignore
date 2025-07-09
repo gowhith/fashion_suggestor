@@ -1,0 +1,15 @@
+# Ignore Python environment and cache
+venv/
+__pycache__/
+*.pyc
+
+# Ignore secrets
+.env
+
+# Ignore system/IDE files
+.DS_Store
+*.swp
+
+# Optional: Ignore logs and temp files
+*.log
+*.tmp
