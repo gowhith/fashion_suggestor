@@ -1,17 +1,7 @@
-# Ignore Python environment and cache
-venv/
 __pycache__/
 *.pyc
-
-# Ignore secrets
 .env
-
-# Ignore system/IDE files
+*.sqlite3
+*.db
 .DS_Store
-*.swp
-
-# Optional: Ignore logs and temp files
-*.log
-*.tmp
-.env
-.env
+vector_store/
