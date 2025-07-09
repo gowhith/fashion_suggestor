@@ -101,7 +101,3 @@ streamlit run app.py
 - Python 3.8+
 - See `requirements.txt` for all dependencies
 
----
-
-## Author
-- [gowhith](https://github.com/gowhith) 
